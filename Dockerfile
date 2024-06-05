@@ -1,7 +1,7 @@
 FROM alpine:3.15
 LABEL maintainer="AmneziaVPN"
 
-ARG XRAY_RELEASE="v1.8.6"
+ARG XRAY_RELEASE="v1.8.13"
 
 RUN apk add --no-cache curl unzip bash openssl netcat-openbsd dumb-init rng-tools xz
 RUN apk --update upgrade --no-cache
@@ -12,7 +12,7 @@ RUN chmod a+x /opt/amnezia/start.sh
 
 RUN mkdir -p /opt/amnezia/xray
 
-RUN curl -L https://github.com/XTLS/Xray-core/releases/download/v1.8.13/Xray-linux-arm64-v8a.zip > /root/xray.zip;\
+RUN curl -L https://github.com/XTLS/Xray-core/releases/download/${XRAY_RELEASE}/Xray-linux-arm64-v8a.zip > /root/xray.zip;\
   unzip /root/xray.zip -d /usr/bin/;\
   chmod a+x /usr/bin/xray;
 
