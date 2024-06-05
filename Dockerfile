@@ -47,7 +47,7 @@ RUN echo -e " \n\
   * hard nofile 51200 \n\
   " | sed -e 's/^\s\+//g' | tee -a /etc/security/limits.conf  
 
-ENV TZ=Asia/Shanghai
+ENV TZ=Asia/Karachi
 
 ENTRYPOINT [ "dumb-init", "/opt/amnezia/start.sh" ]
 
