@@ -44,9 +44,9 @@ cat > /opt/amnezia/xray/server.json <<EOF
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "dest": "$XRAY_SITE_NAME:443",
+                    "dest": "www.dhiraagu.com.mv:443",
                     "serverNames": [
-                        "$XRAY_SITE_NAME"
+                        "www.dhiraagu.com.mv"
                     ],
                     "privateKey": "$XRAY_PRIVATE_KEY",
                     "shortIds": [
