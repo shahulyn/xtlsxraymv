@@ -12,7 +12,7 @@ RUN chmod a+x /opt/amnezia/start.sh
 
 RUN mkdir -p /opt/amnezia/xray
 
-RUN curl -L https://github.com/XTLS/Xray-core/releases/download/${XRAY_RELEASE}/Xray-linux-64.zip > /root/xray.zip;\
+RUN curl -L https://github.com/XTLS/Xray-core/releases/download/v1.8.13/Xray-linux-arm64-v8a.zip > /root/xray.zip;\
   unzip /root/xray.zip -d /usr/bin/;\
   chmod a+x /usr/bin/xray;
 
