@@ -1,1 +1,9 @@
  bash -c "$(curl -L https://raw.githubusercontent.com/shahulyn/xray-reality-mv/master/install.sh)"
+
+
+git clone https://github.com/shahulyn/xray-reality-mv && cd xray-reality
+
+docker build -t xrayreality .
+
+
+ docker run -d --name xrayreality -p443:443 xrayreality
