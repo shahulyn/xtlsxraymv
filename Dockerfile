@@ -3,7 +3,7 @@ LABEL maintainer="AmneziaVPN"
 
 ARG XRAY_RELEASE="v1.8.13"
 
-RUN apk add --no-cache curl unzip bash openssl netcat-openbsd dumb-init rng-tools xz
+RUN apk add --no-cache curl unzip bash nano openssl netcat-openbsd dumb-init rng-tools xz
 RUN apk --update upgrade --no-cache
 
 RUN mkdir -p /opt/amnezia
