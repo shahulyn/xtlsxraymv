@@ -13,5 +13,5 @@ sudo docker network connect amnezia-dns-net xtlsxraymv
 sudo docker exec -i xtlsxraymv bash -c 'mkdir -p /dev/net; if [ ! -c /dev/net/tun ]; then mknod /dev/net/tun c 10 200; fi'
 
 # Prevent to route packets outside of the container in case if server behind of the NAT
-sudo docker exec -i xtlsxraymv sh -c "ifconfig eth0:0 158.178.225.124 netmask 255.255.255.255 up"
+sudo docker exec -i xtlsxraymv sh -c "ifconfig eth0:0 $server_ip netmask 255.255.255.255 up"
 
